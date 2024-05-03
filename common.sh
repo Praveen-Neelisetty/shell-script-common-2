@@ -1,4 +1,13 @@
 
+set -e
+Track_Error()
+{
+    echo "Error occured at line number: $1, error command: $2"
+}
+
+trap 'Track_Error ${LINENO} "$BASH_COMMAND"' ERR
+
+
 USERID=$(id -u)
 TIMESTAMP=$(date +%F-%H-%M-%S)
 SCRIPT_NAME=$(echo $0 | awk -F "." '{print $1F}')
@@ -31,3 +40,4 @@ VALIDATE()
         echo -e "$2 ...$G SUCCESS $N"
     fi
 }
+
