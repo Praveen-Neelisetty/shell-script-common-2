@@ -11,7 +11,7 @@ read -r -p "Enter You MySQL Password: " MySqlPassword
 #dnf list installed mysql &>>$LOGFILE "MySQL Exists or not"
 ##VALIDATE $? "MySQL Exists?"
 
-dnf install mysql-serveRr -y &>>$LOGFILE #"MySQL install"
+dnf install mysql-serveRRr -y &>>$LOGFILE #"MySQL install"
 #VALIDATE $? "MySql Installation"
 
 systemctl start mysqld &>>$LOGFILE #"MySQL start"
