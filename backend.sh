@@ -39,7 +39,7 @@ unzip /tmp/backend.zip &>>$LOGFILE
 npm install &>>$LOGFILE
 #VALIDATE $? "Installing npm packages"
 
-cp /home/ec2-user/shell-script-common/backend.service /etc/systemd/system/backend.service &>>$LOGFILE
+cp /home/ec2-user/shell-script-common-2/backend.service /etc/systemd/system/backend.service &>>$LOGFILE
 #VALIDATE $? "Copied backend service"
 
 systemctl daemon-reload &>>$LOGFILE
